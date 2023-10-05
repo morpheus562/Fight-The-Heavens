@@ -11,7 +11,7 @@ END ELSE BEGIN
 END
 
 ///////////////////////////////////////////////////////////////////////////
-// Update Dorn's Forest Clearing Script                                  //
+// Update Dorn's Forest Clearing Script and Dialog                       //
 ///////////////////////////////////////////////////////////////////////////
 EXTEND_BOTTOM ~OH5400.bcs~ ~fight-the-heavens/baf/oh5400.baf~
 COMPILE EVALUATE_BUFFER ~fight-the-heavens/dlg/ohdplanj.d~ 
