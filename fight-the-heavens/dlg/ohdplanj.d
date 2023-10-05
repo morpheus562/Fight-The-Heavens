@@ -1,8 +1,7 @@
 ///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
-// Update State Trigger for Narlen Darkwalk (Bard)                       //
+// Update State Trigger for Planetar of Justice                          //
 ///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 
-REPLACE_TRIGGER_TEXT NARLEN ~Global("TalkedToNarlen","GLOBAL",0)[ %TAB%%WNL%]*!~ ~Global("TalkedToNarlen","GLOBAL",0) !InParty([0.0.0.BARD_ALL]) !~
-REPLACE_TRIGGER_TEXT NARLEN ~!See(\[PC\.0\.0\.BARD\])~ ~~
+REPLACE_TRIGGER_TEXT OHDPLANJ ~Global("OHD_planetar","OH5400",3)~ ~Global("OHD_planetar","OH5400",3) InParty("dorn")~
