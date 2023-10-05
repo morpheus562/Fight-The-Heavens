@@ -21,6 +21,7 @@ AUTO_TRA ~fight-the-heavens/languages/%s~
 LANGUAGE ~English~
          ~english~
          ~fight-the-heavens/languages/english/setup.tra~
+         ~fight-the-heavens/languages/english/dialog.tra~
 
 ///////////////////////////////////////////////////////////////////////////
 // Main Component                                                        //
