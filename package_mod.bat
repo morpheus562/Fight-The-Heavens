@@ -5,9 +5,9 @@ REM /* this initializes the values for the different variables referenced in com
 call "%~dp0..\ModPackaging\utilities\ie_games.bat"
 
 REM /* MODIFY: set the values of the 3 variables below to reflect the current mod version */
-set "mod_name=SoD Remix"
+set "mod_name=Fight the Heavens"
 set "mod_version=v0.1-alpha"
-set mod_folder=sod-remix
+set mod_folder=fight-the-heavens
 
 REM /* MODIFY: list here which IE games the mod is compatible with, from this list of possibilities: */
 REM /* %bgiiee%, %iwd1%, %iwdee%, %iwd2%, %iwd2ee%, %iwd-in-bg2%, %pst%, %pstee%, %eet% */
@@ -24,7 +24,7 @@ set audio_folder=%mod_folder%\audio
 set tispack_folder=%mod_folder%\tiz
 set tile2ee_folder=%mod_folder%\tools\tile2ee
 set iconv_folder=%mod_folder%\languages\iconv
-set mod_readme=https://github.com/Gibberlings3/SoD-Remix/blob/main/README.md
+set mod_readme=https://github.com/Gibberlings3/Fight-the-Heavens/blob/main/README.md
 
 REM /* MODIFY: if you don't need to build a specific package, you can disable it by setting the appropriate variable below to 0 */
 set build_windows=1

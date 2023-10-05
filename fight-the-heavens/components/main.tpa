@@ -1,49 +1,16 @@
-// SoD Remix
+// Fight the Heavens
 
 ///////////////////////////////////////////////////////////////////////////
-// Update BGEE Transition into SoD                                       //
+// Update Oasis Script                                                   //
 ///////////////////////////////////////////////////////////////////////////
-COPY_EXISTING ~BDSODTRN.BCS~ ~override~
-    DECOMPILE_AND_PATCH BEGIN
-        REPLACE_TEXTUALLY ~StartMovie("SODCIN01")~ ~~
-    END
-BUT_ONLY
+ACTION_IF FILE_EXISTS_IN_GAME "AR6300.BCS" BEGIN
+    EXTEND_BOTTOM ~AR6300.bcs~ ~fight-the-heavens/baf/ar6300.baf~
+END ELSE BEGIN
+    COPY ~fight-the-heavens/baf/AR6300.baf~  ~override/AR6300.bcs~
+        COMPILE_BAF_TO_BCS
+END
 
 ///////////////////////////////////////////////////////////////////////////
-// Update Transition into BG2EE                                          //
+// Update Dorn's Forest Clearing Script                                  //
 ///////////////////////////////////////////////////////////////////////////
-COPY_EXISTING ~K#TELBGT.BCS~ ~override~
-    DECOMPILE_AND_PATCH BEGIN
-        REPLACE_TEXTUALLY ~ActionOverride(Player2,MakeUnselectable(1))~ ~ActionOverride(Player2,DropInventory())
-        ActionOverride(Player2,MakeUnselectable(1))~
-        REPLACE_TEXTUALLY ~ActionOverride(Player3,MakeUnselectable(1))~ ~ActionOverride(Player3,DropInventory())
-        ActionOverride(Player3,MakeUnselectable(1))~
-        REPLACE_TEXTUALLY ~ActionOverride(Player4,MakeUnselectable(1))~ ~ActionOverride(Player4,DropInventory())
-        ActionOverride(Player4,MakeUnselectable(1))~
-        REPLACE_TEXTUALLY ~ActionOverride(Player5,MakeUnselectable(1))~ ~ActionOverride(Player5,DropInventory())
-        ActionOverride(Player5,MakeUnselectable(1))~
-        REPLACE_TEXTUALLY ~ActionOverride(Player6,MakeUnselectable(1))~ ~ActionOverride(Player6,DropInventory())
-        ActionOverride(Player6,MakeUnselectable(1))~
-        REPLACE_TEXTUALLY ~GivePartyAllEquipment()
-        SetGlobal("bd_plot","GLOBAL",700)~ ~GivePartyAllEquipment()
-        SetGlobal("BD_HAVE_SOD","GLOBAL",1)
-        SetGlobal("BD_SOD_IMPORT_11","GLOBAL",1)
-        SetGlobal("BD_SOD_IMPORT_05","GLOBAL",1)
-        SetGlobal("BD_SOD_IMPORT_04","GLOBAL",1)
-        SetGlobal("BD_SOD_IMPORT_09","GLOBAL",1)
-        SetGlobal("BD_SOD_IMPORT_08","GLOBAL",1)
-        SetGlobal("BD_SOD_IMPORT_06","GLOBAL",1)
-        SetGlobal("BD_SOD_IMPORT_07","GLOBAL",1)
-        SetGlobal("BD_SOD_IMPORT_03","GLOBAL",1)
-        SetGlobal("BD_SOD_IMPORT_10","GLOBAL",1)
-        SetGlobal("BD_SOD_IMPORT_01","GLOBAL",1)
-        SetGlobal("BD_SOD_IMPORT_02","GLOBAL",0)
-        SetGlobal("bd_plot","GLOBAL",700)~
-    END
-BUT_ONLY
-
-///////////////////////////////////////////////////////////////////////////
-// Copy .BCS file to override folder                                     //
-///////////////////////////////////////////////////////////////////////////
-COPY ~sod-remix/baf/bd0120.baf~  ~override/bd0120.bcs~ // Korlaz Tomb, First Floor
-  COMPILE_BAF_TO_BCS
+EXTEND_BOTTOM ~OH5400.bcs~ ~fight-the-heavens/baf/oh5400.baf~

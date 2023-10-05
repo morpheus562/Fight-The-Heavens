@@ -1,0 +1,10 @@
+IF
+  !InParty("dorn")
+  Global("MO_HeavenAssault","GLOBAL",0)
+  Alignment(Player1,MASK_EVIL)
+  ReputationLT(Player1,9)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_HeavenAssault","GLOBAL",1)
+    ForceRandomEncounter("OH5400")
+END

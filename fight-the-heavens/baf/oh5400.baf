@@ -1,0 +1,7 @@
+IF
+  !InParty("dorn")
+  Global("OHD_planetar","OH5400",1)
+THEN
+  RESPONSE #100
+    SetGlobal("OHD_planetar","OH5400",2)  // Dorn - Forest Clearing
+END

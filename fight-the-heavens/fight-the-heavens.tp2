@@ -1,0 +1,32 @@
+/*************************************************************************/
+///////////////////////////////////////////////////////////////////////////
+// Fight the Heavens by morpheus562                                      //
+///////////////////////////////////////////////////////////////////////////
+/*************************************************************************/
+
+BACKUP ~fight-the-heavens/backup~
+AUTHOR ~morpheus562~
+
+VERSION ~v0.1-alpha~
+README ~fight-the-heavens/readme.%LANGUAGE%.html~ ~fight-the-heavens/readme.html~
+AUTO_EVAL_STRINGS
+
+ASK_EVERY_COMPONENT
+
+ALWAYS
+    INCLUDE ~fight-the-heavens/lib/always.tph~
+END
+
+AUTO_TRA ~fight-the-heavens/languages/%s~
+LANGUAGE ~English~
+         ~english~
+         ~fight-the-heavens/languages/english/setup.tra~
+
+///////////////////////////////////////////////////////////////////////////
+// Main Component                                                        //
+///////////////////////////////////////////////////////////////////////////
+BEGIN @1 DESIGNATED 1 LABEL FightHeaven-Main
+
+REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ @3000
+
+INCLUDE ~fight-the-heavens/components/main.tpa~
