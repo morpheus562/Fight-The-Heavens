@@ -30,3 +30,4 @@ APPEND OHDPLANJ
     SAY @106
     IF ~~ THEN DO ~ActionOverride("OHDPLANJ",Enemy()) SetGlobal("OHD_planetar","OH5400",4)~ EXIT
   END
+END
