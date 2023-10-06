@@ -6,4 +6,4 @@ October 5, 2023
 
 ### Changed 
 
-- Initial creation and alpha release.
+- Initial creation and release.
