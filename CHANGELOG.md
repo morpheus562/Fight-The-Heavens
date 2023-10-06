@@ -1,8 +1,8 @@
 # Changelog
 
-## Version 0.1-alpha
+## Version 1.0
 
-October xx, 2023
+October 5, 2023
 
 ### Changed 
 
