@@ -38,5 +38,5 @@ APPEND OHDPLANJ
   !InParty("dorn")~ THEN BEGIN s1
     SAY @107
     IF ~~ THEN DO ~SetInterrupt(FALSE) SetGlobal("OHD_CRUSADERS","GLOBAL",3) SetGlobal("OHD_planetar","OH5400",6) ChangeAIScript("",GENERAL) ChangeAIScript("",CLASS) SetInterrupt(TRUE)~ EXIT
-
+  END
 END
