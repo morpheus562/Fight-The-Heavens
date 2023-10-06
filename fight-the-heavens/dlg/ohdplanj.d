@@ -5,6 +5,7 @@
 ///////////////////////////////////////////////////////////////////////////
 
 REPLACE_TRIGGER_TEXT OHDPLANJ ~Global("OHD_planetar","OH5400",3)~ ~Global("OHD_planetar","OH5400",3) InParty("dorn")~
+REPLACE_TRIGGER_TEXT OHDPLANJ ~Global("OHD_planetar","OH5400",5)~ ~Global("OHD_planetar","OH5400",5) InParty("dorn")~
 
 APPEND OHDPLANJ
 
@@ -30,4 +31,10 @@ APPEND OHDPLANJ
     SAY @106
     IF ~~ THEN DO ~ActionOverride("OHDPLANJ",Enemy()) SetGlobal("OHD_planetar","OH5400",4)~ EXIT
   END
+
+  IF ~Global("OHD_planetar","OH5400",5)
+  !InParty("dorn")~ THEN BEGIN s1
+    SAY @107
+    IF ~~ THEN DO ~SetInterrupt(FALSE) SetGlobal("OHD_CRUSADERS","GLOBAL",3) SetGlobal("OHD_planetar","OH5400",6) ChangeAIScript("",GENERAL) ChangeAIScript("",CLASS) SetInterrupt(TRUE)~ EXIT
+
 END

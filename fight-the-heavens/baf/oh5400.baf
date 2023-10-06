@@ -5,3 +5,13 @@ THEN
   RESPONSE #100
     SetGlobal("OHD_planetar","OH5400",2)  // Dorn - Forest Clearing
 END
+
+IF 
+  !InParty("dorn")
+  Global("OHD_planetar","OH5400",7)  // Dorn - Forest Clearing
+  Global("ohd_portalon","OH5400",0)  // Dorn - Forest Clearing
+THEN
+  RESPONSE #100
+    SetGlobal("ohd_portalon","OH5400",1)
+    SetGlobal("OHD_planetar","OH5400",8)  // Dorn - Forest Clearing
+END
