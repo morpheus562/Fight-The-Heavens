@@ -3,6 +3,7 @@ IF
   Global("MO_HeavenAssault","GLOBAL",0)
   Alignment(Player1,MASK_EVIL)
   ReputationLT(Player1,9)
+  HasDLC("dorn")
 THEN
   RESPONSE #100
     SetGlobal("MO_HeavenAssault","GLOBAL",1)
