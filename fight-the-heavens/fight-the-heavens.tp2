@@ -7,7 +7,7 @@
 BACKUP ~fight-the-heavens/backup~
 AUTHOR ~morpheus562~
 
-VERSION ~v0.1-alpha~
+VERSION ~v1.0~
 README ~fight-the-heavens/readme.%LANGUAGE%.html~ ~fight-the-heavens/readme.html~
 AUTO_EVAL_STRINGS
 
